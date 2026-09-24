@@ -121,5 +121,5 @@ formal language: Any of the languages that people have designed for specific pur
 
 bug: An error in a program.
 
-debugging: The process of finding and correcting errors.
+debugging: The process of finding and correcting error
 """
