@@ -1,5 +1,14 @@
 #1.9.1 exercises
+# Ask a virtual assistance
+# from what I understood, ask AI or website.
 
+"""
+1.9.2. Exercise
+You might wonder what round does if a number ends in 0.5.
+The answer is that it sometimes rounds up and sometimes rounds down.
+Try these examples and see if you can figure out what rule it follows.
+"""
+print("1.9.2 exercises")
 print(round(42.5))
 
 print(round(43.5))
@@ -11,8 +20,9 @@ print(round(3.5))
 print(round(4.5))
 print(round(5.5))
 
-print("rule: Python uses **bankers rounding (round‑to‑nearest‑even)** "
-      "\nCommon misconception many people expect: `2.5 → 3` (school‑style round half up). Python’s built‑in `round()` does **not** work that way.")
+print("rule: Python uses bankers rounding (round‑to‑nearest‑even) "
+      "\nCommon misconception many people expect: `2.5 → 3` (school‑style round half up). "
+      "\nPython’s built‑in `round()` does not work that way.")
 
 """
 1.9.3. Exercise
@@ -27,6 +37,9 @@ What happens if you have two values with no operator between them, like 4 2?
 
 If you call a function like round(42.5), what happens if you leave out one or both parentheses?
 """
+
+print("\n1.9.3. Exercise")
+
 n = +2
 n2 = 2++2
 print(n)
@@ -44,6 +57,7 @@ and we can use the type function to find the type of any value.
 What is the type of the value of the following expressions? 
 Make your best guess for each one, and then use type to find out.
 """
+print("\n1.9.4. Exercise")
 
 print(type(765)) # int
 
@@ -69,6 +83,8 @@ The following questions give you a chance to practice writing arithmetic express
 If you already know about variables, you can use them for this exercise. 
 If you don’t, you can do the exercise without them – and then we’ll see them in the next chapter.
 """
+print("\n1.9.5. Exercise")
+
 # How many seconds are there in 42 minutes 42 seconds?
 def count_seconds(minutes, seconds):
     return minutes*60 + seconds
@@ -76,7 +92,8 @@ def count_seconds(minutes, seconds):
 print(count_seconds(minutes=1, seconds=40)) # return values should be 100 (seconds)
 print(count_seconds(minutes=42, seconds=42)) #2562
 
-# How many miles are there in 10 kilometers? Hint: there are 1.61 kilometers in a mile.
+# How many miles are there in 10 kilometers?
+# Hint: there are 1.61 kilometers in a mile.
 def km_to_miles(mile):
     kilometers = 1.61*mile
     return kilometers
