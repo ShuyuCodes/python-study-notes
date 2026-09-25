@@ -10,11 +10,8 @@ Try these examples and see if you can figure out what rule it follows.
 """
 print("1.9.2 exercises")
 print(round(42.5))
-
 print(round(43.5))
-
 print(round(0.5))
-
 print(round(2.5))
 print(round(3.5))
 print(round(4.5))
