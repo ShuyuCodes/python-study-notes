@@ -64,7 +64,7 @@ print(li_letters)
 
 s = 'pining for the fjords'
 t = s.split()
-print(t)
+print(t, '9.6. Lists and strings')
 
 s_1 = 'ex-parrot'
 t_1 = s_1.split('-')

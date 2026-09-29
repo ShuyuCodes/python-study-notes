@@ -14,3 +14,84 @@ For example, before you ask a question try typing “Role: Basic Python Programm
 
 """
 
+"""
+9.15.2. Exercise
+Two words are anagrams if you can rearrange the letters from one to spell the other.
+ For example, tops is an anagram of stop.
+
+One way to check whether two words are anagrams is to sort the letters in both words.
+ If the lists of sorted letters are the same, the words are anagrams.
+
+Write a function called is_anagram that takes two strings and returns True if they are anagrams.
+
+Using your function and the word list, find all the anagrams of takes.
+"""
+
+def is_anagram(string_1, string_2):
+    s1_list = list(string_1)
+    s1_list.sort()
+
+    s2_list = list(string_2)
+    s2_list.sort()
+
+    count = 0
+    if len(string_1) == len(string_2):
+        for i in range(len(string_1)):
+            if s1_list[i] == s2_list[i]:
+                count += 1
+
+        if count == len(string_2):
+            return True
+        else:
+            return False
+    else:
+        print('The length of two strings should be the same!')
+        return False
+
+print(is_anagram('tops', 'stop'))
+print(is_anagram("hej", "hey"))
+
+print('\n')
+print(is_anagram("hi", "hi,"))
+print('\n')
+
+
+# test lines for exercises 9.15.2
+print('test lines for exercises 9.15.2')
+
+string_1 = 'tops'
+s1_list = list(string_1)
+print(s1_list)
+s1_list.sort()
+print(s1_list)
+
+string_2 = 'stop'
+s2_list = list(string_2)
+print(s2_list)
+s2_list.sort()
+print(s2_list)
+
+count = 0
+if len(string_1) == len(string_2):
+    for i in range(len(string_1)):
+        if s1_list[i] == s2_list[i]:
+            count += 1
+
+    if count == len(string_2):
+        print('True')  # return True
+    else:
+        print('False')   # return False
+else:
+    print('The length of two strings should be the same!')
+    print('False')  # return False
+
+# 9.15.3. Exercise
+
+
+
+
+
+
+
+
+
