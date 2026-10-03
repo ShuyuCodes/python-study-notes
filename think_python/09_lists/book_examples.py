@@ -129,8 +129,11 @@ print(a)  # [5, 2, 3]
 # For immutable objects like strings, aliaaint is not as much of a problem.
 
 # 9.11. List arguments
+
+
 def pop_first(lst):
     return lst.pop(0)
+
 
 letters = ['a', 'b', 'c']
 pop_first(letters)
@@ -175,9 +178,3 @@ aliased: If there is more than one variable that refers to an object, the object
 
 attribute: One of the named values associated with an object.
 """
-
-
-
-
-
-
