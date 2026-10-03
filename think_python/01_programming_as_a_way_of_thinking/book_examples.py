@@ -1,19 +1,22 @@
 # 1.1 Arithmetic operators
-# integer division, //, it always rounds to floor
 
-print(85//2) # 42.5 but rounds to floor
+# addition
+print(3+2)
+
+# integer division, //, it always rounds to floor
+print(85//2)  # 42.5 but rounds to floor
 
 # exponentiation, **, it raises a number to a power
-print(7**2) # 7*7
+print(7**2)  # 7*7
 
 # XOR, ^, a bitwise operator in Python. In other languages, it is exponentiation
-print(7^2)
+print(7 ^ 2)
 
 # 1.2. Expressions
 # A collection of operators and numbers is called an expression.
 # An expression can contain any number of operators and numbers.
 
-#Notice that exponentiation happens before addition.
+# Notice that exponentiation happens before addition.
 # Python follows the order of operations you might have learned in a math class:
 # exponentiation happens before multiplication and division,
 # which happen before addition and subtraction.

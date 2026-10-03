@@ -86,22 +86,27 @@ for key in counter:
     print(key, value)
 
 # 10.7. Accumulating a list
-print('\n', 'this is book example 10.7')
+print('\n--this is book example 10.7')
 known = {0: 0, 1: 1}
 
 
 def fibonacci_memo(n):
     if n in known:
-        print('1st if condition, return known list with ', n, ' =', known[n], '\n')
+        print('1st, this time n =', n, 'known =', known)
+        print('1st if condition, return known list with n =', known[n], '\n')
         return known[n]
 
+    print('2nd, this time n =', n, 'known =', known)
     res = fibonacci_memo(n-1) + fibonacci_memo(n-2)
     known[n] = res
-    print('2nd, return known list with ', n, ' =', res)
+    print('2nd, return known list with known[n] = fibonacci_memo(n-1) + fibonacci_memo(n-2) =', res)
     return res
 
 
 print(fibonacci_memo(4))
 
+print('this is known dictionary=', known)
+
 result = fibonacci_memo(4)
 print('result is', result)
+
