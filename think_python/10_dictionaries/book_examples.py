@@ -24,7 +24,7 @@ print('if "one" in numbers:', t)  # True
 f = 1 in numbers
 print('if 1 in numbers:', f)  # False
 
-# to see whether something appears as a value in a dictionary, we can use values method, which returns a sequence of values,
+# To see whether something appears as a value in a dictionary, we can use values method, which returns a sequence of values,
 # then use in operator
 v = 1 in numbers.values()
 print('if 1 in numbers.values():', v)  # True
@@ -110,3 +110,29 @@ print('this is known dictionary=', known)
 result = fibonacci_memo(4)
 print('result is', result)
 
+# 10.10. Glossary
+"""
+dictionary: An object that contains key-value pairs, also called items.
+
+item: In a dictionary, another name for a key-value pair.
+
+key: An object that appears in a dictionary as the first part of a key-value pair.
+
+value: An object that appears in a dictionary as the second part of a key-value pair. This is more specific than our previous use of the word “value”.
+
+mapping: A relationship in which each element of one set corresponds to an element of another set.
+
+hash table: A collection of key-value pairs organized so that we can look up a key and find its value efficiently.
+
+hashable: Immutable types like integers, floats and strings are hashable. Mutable types like lists and dictionaries are not.
+
+hash function: A function that takes an object and computes an integer that is used to locate a key in a hash table.
+
+accumulator: A variable used in a loop to add up or accumulate a result.
+
+filtering: Looping through a sequence and selecting or omitting elements.
+
+call graph: A diagram that shows every frame created during the execution of a program, with an arrow from each caller to each callee.
+
+memo: A computed value stored to avoid unnecessary future computation.
+"""
