@@ -179,10 +179,109 @@ with open('pg345_replaced.txt', 'w') as writer, open('pg345_cleaned.txt') as rea
 
 
 # 8.8. Regular expressions
+text = "I am Dracula; and I bid you welcome, Mr. Harker, to my house."
+pattern = 'Dracula'
+import re
+
+result = re.search(pattern, text)
+print(result)
+# If the pattern appears in the text, search returns a Match object that contains the results of the search.
+# Among other information, it has a variable named string that contains the text that was searched.
+
+print(result.string)
+
+# It also provides a method called group that returns the part of the text that matched the pattern.
+print(result.group())
+
+# And it provides a method called span that returns the index in the text where the pattern starts and ends.
+print(result.span())
+
+# If the pattern doesn’t appear in the text, the return value from search is None.
+result = re.search('Count', text)
+print(result)
+
+# Putting all that together, here’s a function that loops through the lines in the book
+# until it finds one that matches the given pattern, and returns the Match object.
+
+
+def find_first(pattern):
+    with open('pg345_cleaned.txt') as reader:
+        for line in reader:
+            result = re.search(pattern, line)
+            if result != None:
+                return result
+
+
+result = find_first('junk')
+print(result.string)
+
+# the vertical bar character, '|', it can match either the sequence on the left or the sequence on the right.
+pattern = 'junk|some'
+result = find_first(pattern)
+print(result.string)
+
+# We can use a pattern like this to see how many times a character is mentioned by either name.
+# Here’s a function that loops through the book and counts the number of lines that match the given pattern.
+
+def count_matches(pattern):
+    count = 0
+    with open('pg345_cleaned.txt') as reader:
+        for line in reader:
+            result = re.search(pattern, line)
+            if result != None:
+                count += 1
+
+    return count
+
+
+print(count_matches('junk|some'))
+
+# The special character '^' matches the beginning of a string, so we can find a line that starts with a given pattern.
+result = find_first('some')
+print(result.string)
+
+# And the special character '$' matches the end of a string,
+# so we can find a line that ends with a given pattern (ignoring the newline at the end).
+result = find_first('header$')
+print(result.string)
+
 
 # 8.9. String substitution
 
+pattern = 'cent(er|re)'
+# In this pattern, the parentheses enclose the part of the pattern the vertical bar applies to.
+# So this pattern matches a sequence that starts with 'cent' and ends with either 'er' or 're'.
+
+# The following pattern uses the special character '?', which means that the previous character is optional.
+pattern = 'colou?r'  # This pattern matches either “colour” with the 'u' or “color” without it.
+
+# Now suppose we want to produce an edition of the book with American spellings.
+# We can use the sub function in the re module, which does string substitution.
+re.sub(pattern, 'color', line)  # In the result, you can see that “colour” has been replaced with “color”.
+
 # 8.10. Debugging
+
+
+# If you are working in a Jupyter notebook, you can use shell commands to help.
+# For example, to display the first few lines of a file, you can use the command !head, like this:
+!head pg345_cleaned.txt
+# The initial exclamation point, !, indicates that this is a shell command,
+# which is not part of Python.
+
+# To display the last few lines, you can use !tail.
+!tail pg345_cleaned.txt
+
+# To make a small file that contains part of a larger file, we can use !head again with the redirect operator,
+# >, which indicates that the results should be written to a file rather than displayed.
+
+!head pg345_cleaned.txt > pg345_cleaned_10_lines.txt
+# By default, !head reads the first 10 lines, but it takes an optional argument that indicates the number of lines to read.
+!head -100 pg345_cleaned.txt > pg345_cleaned_100_lines.txt
+# This shell command reads the first 100 lines from pg345_cleaned.txt and writes them to a file called pg345_cleaned_100_lines.txt.
+
+# Note: The shell commands !head and !tail are not available on all operating systems. If they don’t work for you,
+# we can write similar functions in Python. See the first exercise at the end of this chapter for suggestions.
+
 
 # 8.11. Glossary
 """
