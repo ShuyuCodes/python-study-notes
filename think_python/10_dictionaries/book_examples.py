@@ -1,3 +1,4 @@
+# 10.1. A dictionary is a mapping
 
 # 10.2. Creating dictionaries
 print('\nthis is book example 10.2')
@@ -37,7 +38,7 @@ d = {0: 0, 1: 1}
 b = 0 in d
 print('if 0 in d:', b)  # True
 
-# 10.4.A collection of counters
+# 10.4. A collection of counters
 # Suppose you are given a string, and you want to count how many times each letter appears.
 # A dictionary is a good tool for this job.
 
@@ -85,8 +86,15 @@ for key in counter:
     value = counter[key]
     print(key, value)
 
+# 10.6. Lists and dictionaries
+
 # 10.7. Accumulating a list
-print('\n--this is book example 10.7')
+
+# 10.8. Memos
+
+# A previously computed value that is stored for later use is called a memo.
+
+print('\n--this is book example 10.8')
 known = {0: 0, 1: 1}
 
 
