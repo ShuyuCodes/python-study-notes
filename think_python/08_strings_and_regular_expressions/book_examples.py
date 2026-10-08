@@ -223,6 +223,7 @@ print(result.string)
 # We can use a pattern like this to see how many times a character is mentioned by either name.
 # Here’s a function that loops through the book and counts the number of lines that match the given pattern.
 
+
 def count_matches(pattern):
     count = 0
     with open('pg345_cleaned.txt') as reader:
@@ -264,19 +265,20 @@ re.sub(pattern, 'color', line)  # In the result, you can see that “colour” h
 
 # If you are working in a Jupyter notebook, you can use shell commands to help.
 # For example, to display the first few lines of a file, you can use the command !head, like this:
-!head pg345_cleaned.txt
+
+# !head pg345_cleaned.txt
 # The initial exclamation point, !, indicates that this is a shell command,
 # which is not part of Python.
 
 # To display the last few lines, you can use !tail.
-!tail pg345_cleaned.txt
+# !tail pg345_cleaned.txt
 
 # To make a small file that contains part of a larger file, we can use !head again with the redirect operator,
 # >, which indicates that the results should be written to a file rather than displayed.
 
-!head pg345_cleaned.txt > pg345_cleaned_10_lines.txt
+# !head pg345_cleaned.txt > pg345_cleaned_10_lines.txt
 # By default, !head reads the first 10 lines, but it takes an optional argument that indicates the number of lines to read.
-!head -100 pg345_cleaned.txt > pg345_cleaned_100_lines.txt
+# !head -100 pg345_cleaned.txt > pg345_cleaned_100_lines.txt
 # This shell command reads the first 100 lines from pg345_cleaned.txt and writes them to a file called pg345_cleaned_100_lines.txt.
 
 # Note: The shell commands !head and !tail are not available on all operating systems. If they don’t work for you,
