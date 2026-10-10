@@ -153,5 +153,92 @@ You would learn that E is in the word and in the correct position,
 # Write a function called check_word that takes a five-letter word and
 # checks whether it could be the target word, given these guesses.
 
+# You can use any of the functions from the previous chapter, like uses_any.
 
 
+def uses_any(word, letters):
+    for letter in word:
+        if letter in letters:
+            return True
+    return False
+
+
+def check_word(word):
+    word = word.lower()
+
+    # The target word must contain E.
+    if 'e' not in word:
+        return False
+
+    # E cannot be in the 3rd or 5th position.
+    if word[2] == 'e' or word[4] == 'e':
+        return False
+
+    # These letters do not appear in the target word.
+    forbidden = 'spadclrk'
+    if uses_any(word, forbidden):
+        return False
+
+    return True
+
+
+# count = 0
+#
+# with open('words.txt') as file:
+#     for line in file:
+#         word = line.strip()
+#
+#         if len(word) == 5 and check_word(word):
+#             count += 1
+#
+# print(count)
+
+
+# 8.12.4. Exercise
+# Continuing the previous exercise, suppose you guess the work TOTEM and learn that
+# the E is still not in the right place, but the M is. How many words are left?
+
+
+def check_word(word):
+    word = word.lower()
+
+    if len(word) != 5:
+        return False
+
+    if 'e' not in word:
+        return False
+
+    if word[2] == 'e' or word[3] == 'e' or word[4] == 'e':
+        return False
+
+    if word[4] != 'm':
+        return False
+
+    forbidden = 'spadclrk'
+    if uses_any(word, forbidden):
+        return False
+
+    return True
+
+
+count = 0
+
+with open('words.txt') as file:
+    for line in file:
+        word = line.strip()
+
+        if check_word(word):
+            count += 1
+
+print(count)
+
+# 8.12.5. Exercise
+
+# count the number of lines that contain the word pale in any form, including pale, pales, paled, and paleness,
+# as well as the related word pallor. Use a single regular expression that matches any of these words.
+pattern = r'pale(s|d|ness)?|pallor'
+# ? matches the precede once or zero time
+
+# As an additional challenge, make sure that it doesn’t match any other words,
+# like impale – you might want to ask a virtual assistant for help.
+pattern = r'\b(pale(s|d|ness)?|pallor)\b'  # \b is word boundary
