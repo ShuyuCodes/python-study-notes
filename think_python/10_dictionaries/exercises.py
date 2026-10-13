@@ -235,6 +235,8 @@ print(ls)
 print('\n')
 
 print('this is exercise 10.11.4')
+
+
 def find_repeats(counter):
     """Makes a list of keys with values greater than 1.
 
@@ -322,6 +324,8 @@ print(d)
 
 
 print('this is exercise 10.11.5')
+
+
 def add_counters(dict1, dict2):
     """Combine two letter‑count dictionaries, sum counts for each letter.
 
@@ -340,6 +344,7 @@ def add_counters(dict1, dict2):
         d[key] = dict2.get(key,0) + d.get(key, 0)
 
     return d
+
 
 # Test case 1: the example from problem statement: brontosaurus and apatosaurus
 combined = add_counters(counter1, counter2)
@@ -374,6 +379,7 @@ print(res)
 # expected: {}
 
 # Reference sample implementation (from virtual assistant):
+
 
 def add_counters_va(c1, c2):
     """Combine two letter‑count dictionaries, sum counts for each letter.
