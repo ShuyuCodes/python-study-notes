@@ -58,6 +58,8 @@ def is_anagram(string_1, string_2):
         print('The length of two strings should be the same!')
         return False
 
+
+print('this is anagram exercise 9.15.2')
 print(is_anagram('tops', 'stop'))
 print(is_anagram("hej", "hey"))
 
