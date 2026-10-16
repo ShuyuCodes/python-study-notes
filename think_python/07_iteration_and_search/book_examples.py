@@ -32,7 +32,7 @@ print(has_e('Emma'))
 
 #  list of about 114,000 official crosswords;
 #  that is, words that are considered valid in crossword puzzles and other word games.
-file_object = open('words.txt')
+file_object = open('../words.txt')
 
 # The file object provides a function called readline, which reads characters from the file
 # until it gets to a newline and returns the result as a string:
@@ -80,8 +80,8 @@ print(z)
 
 total = 0
 
-with open('words.txt') as reader:
-    for line in open('words.txt'):
+with open('../words.txt') as reader:
+    for line in reader:
         word = line.strip()
         total += 1
 
@@ -91,7 +91,7 @@ print(total)
 total = 0
 count = 0
 
-with open('words.txt') as reader:
+with open('../words.txt') as reader:
     for line in reader:
         word = line.strip()
         total = total + 1

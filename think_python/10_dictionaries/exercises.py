@@ -451,7 +451,7 @@ def load_words(filename):
 
 
 # load the file into variable word_list
-word_list = load_words("words.txt")
+word_list = load_words("../words.txt")
 word_set = set(word_list)
 # Look‑up in a set is faster than in a list. Set uses hash‑table; elements must be hashable.
 

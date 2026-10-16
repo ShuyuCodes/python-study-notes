@@ -110,7 +110,7 @@ print(28 % 26)
 
 
 # create a word set with unique words
-with open('words.txt') as reader:
+with open('../words.txt') as reader:
     word_list = []
     d = {}
 
