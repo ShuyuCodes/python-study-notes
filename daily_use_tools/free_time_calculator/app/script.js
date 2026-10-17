@@ -123,6 +123,24 @@ function toAbsolutePeriods(periods, dateString, zone) {
     });
 }
 
+// Include free periods from nearby local dates,
+// so periods crossing midnight are not missed.
+function getAbsolutePeriodsAroundDate(periods, dateString, zone) {
+    const allPeriods = [];
+
+    for (let offset = -2; offset <= 2; offset++) {
+        const baseDate = DateTime
+            .fromISO(dateString, { zone })
+            .plus({ days: offset })
+            .toISODate();
+
+        allPeriods.push(
+            ...toAbsolutePeriods(periods, baseDate, zone)
+        );
+    }
+
+    return allPeriods;
+}
 
 // Find overlapping intervals on the absolute timeline.
 function findOverlaps(firstPeriods, secondPeriods) {
@@ -257,9 +275,42 @@ form.addEventListener("submit", function (event) {
         );
 
         // Find the periods when both people are free.
-        const sharedPeriods = findOverlaps(
-            mikaAbsolute, shuyuAbsolute
-        );
+//        const sharedPeriods = findOverlaps(
+//            mikaAbsolute, shuyuAbsolute
+//        );
+          // Calculate schedules across nearby dates.
+          const mikaPeriodsAroundDate = getAbsolutePeriodsAroundDate(
+              mika.periods, selectedDate, SWEDEN_ZONE
+          );
+
+          const shuyuPeriodsAroundDate = getAbsolutePeriodsAroundDate(
+              shuyu.periods, selectedDate, CHINA_ZONE
+          );
+
+          // Find all overlapping periods.
+          const allSharedPeriods = findOverlaps(
+              mikaPeriodsAroundDate,
+              shuyuPeriodsAroundDate
+          );
+
+          // Keep only shared time within the selected China calendar day.
+          const chinaDayStart = DateTime
+              .fromISO(selectedDate, { zone: CHINA_ZONE })
+              .startOf("day")
+              .toMillis();
+
+          const chinaDayEnd = DateTime
+              .fromISO(selectedDate, { zone: CHINA_ZONE })
+              .plus({ days: 1 })
+              .startOf("day")
+              .toMillis();
+
+          const sharedPeriods = allSharedPeriods
+              .map(period => ({
+                  start: Math.max(period.start, chinaDayStart),
+                  end: Math.min(period.end, chinaDayEnd)
+              }))
+              .filter(period => period.start < period.end);
 
 
 //        const messageLines = [
