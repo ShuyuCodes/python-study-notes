@@ -1,0 +1,184 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    color-scheme: light;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    color: #263445;
+    background: #f3f6fb;
+}
+
+body {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 20px 48px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    letter-spacing: -0.04em;
+}
+
+header p {
+    color: #68778b;
+    margin-top: 0;
+}
+
+#schedule-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+section {
+    min-width: 0;
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #e1e8f0;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgb(35 55 80 / 5%);
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+section p {
+    color: #68778b;
+    font-size: 0.9rem;
+}
+
+label {
+    display: block;
+    margin: 18px 0 6px;
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #ccd6e2;
+    border-radius: 9px;
+    background: #fff;
+    color: inherit;
+    font: inherit;
+}
+
+input:focus {
+    outline: 3px solid #dce9ff;
+    border-color: #477fe5;
+}
+
+#common-free-time {
+    grid-column: 1 / -1;
+}
+
+button {
+    min-height: 44px;
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 10px;
+    background: #315fc4;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background: #244da5;
+    transform: translateY(-1px);
+}
+
+button:focus-visible {
+    outline: 3px solid #9bbcff;
+    outline-offset: 3px;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#copy-results-button {
+    margin-left: 8px;
+    background: #e8eef8;
+    color: #27436e;
+}
+
+#copy-results-button:hover:not(:disabled) {
+    background: #d8e4f7;
+}
+
+#results {
+    margin-top: 24px;
+    padding: 20px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    overflow-wrap: anywhere;
+}
+
+#results h3 {
+    margin-top: 20px;
+    color: #244da5;
+}
+
+#results h3:first-child {
+    margin-top: 0;
+}
+
+#results hr {
+    border: 0;
+    border-top: 1px solid #dfe6ef;
+    margin: 18px 0;
+}
+
+#copy-status {
+    min-height: 24px;
+    font-size: 0.9rem;
+    color: #3b6c4a;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 20px 12px 32px;
+    }
+
+    #schedule-form {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    section {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    #common-free-time {
+        grid-column: auto;
+    }
+
+    #copy-results-button {
+        display: block;
+        margin: 10px 0 0;
+        width: 100%;
+    }
+
+    #calculate-button {
+        width: 100%;
+    }
+}

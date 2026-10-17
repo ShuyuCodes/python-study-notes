@@ -50,14 +50,12 @@ def get_sweden_time_difference():
     # print('n', china_time)  # 2026-10-17 18:13:58.738944+08:00
     sweden_time = china_time.astimezone(ZoneInfo("Europe/Stockholm"))
 
-    difference = int(
-        (china_time.utcoffset() - sweden_time.utcoffset()).total_seconds() / 3600
-    )
     # utc stands for Coordinated Universal Time.
     # It is the global time standard used as a reference for calculating time zones
-
-    # print('n-utcoffset', china_time.utcoffset())  # 8:00:00
-    # print('e-utcoffset', sweden_time.utcoffset())  # 2:00:00
+    difference = int(
+        (china_time.utcoffset() - sweden_time.utcoffset()).total_seconds() / 3600  # china_time.utcoffset())  # 8:00:00
+        # sweden_time.utcoffset())  # 2:00:00
+    )
     # print('d', difference)  # 6
 
     if sweden_time.dst().total_seconds() != 0:  # dst stands for daylight saving time
@@ -77,8 +75,6 @@ def get_sweden_time_difference():
 
 # time_difference = int(input("How many hours is Sweden behind China? (6 or 7): "))
 time_difference = get_sweden_time_difference()
-
-
 
 if time_difference not in (6, 7):
     print("Please enter either 6 or 7.")
