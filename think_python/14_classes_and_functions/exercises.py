@@ -5,12 +5,13 @@
 There is a lot of new
 vocabulary in this chapter. A conversation with a virtual assistant can
 help solidify your understanding. Consider asking:
+
 “What is the difference between a class and a type?”
 “What is the difference between an object and an instance?”
 “What is the difference between a variable and an attribute?”
 “What are the pros and cons of pure functions compared to impure functions?”
 
-Because we are just getting started with object oriented programming, the code in this
+Because we are just getting started with object-oriented programming, the code in this
 chapter is not idiomatic – it is not the kind of code experienced programmers write. If you
 ask a virtual assistant for help with the exercises, you
 will probably see features we have
