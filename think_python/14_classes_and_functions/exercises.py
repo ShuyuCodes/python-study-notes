@@ -7,9 +7,39 @@ vocabulary in this chapter. A conversation with a virtual assistant can
 help solidify your understanding. Consider asking:
 
 “What is the difference between a class and a type?”
+### 1. What is the difference between a class and a type?
+
+In Python, they are almost the same thing.
+
+- A **class** is the code template you define with the `class` keyword.
+- A **type** is the formal name for the kind of an object.
+When you define `class Cat:`, `Cat` is both a class and a type. Built‑ins like `int`, `str` are also types (they are classes too).
+Loosely: class is how you make new types.
+
 “What is the difference between an object and an instance?”
+
+- An **object** is the general term for anything that has a type and lives in memory in Python. Everything is an object.
+- An **instance** means an object created from a specific class.
+All instances are objects, but not every object is called an instance in the context of your custom class.
+
 “What is the difference between a variable and an attribute?”
+
+A **variable** is a name that points to a value, usually in a local scope or global scope.
+An **attribute** is a name attached to an object, stored inside that object.You access attributes with dot notation `.`.
+
 “What are the pros and cons of pure functions compared to impure functions?”
+
+**Pure function**
+
+- Definition: Same inputs always give the same return value; no side effects (does not modify outside variables, files, shelves, etc.)
+✅ Pros: Easier to test, easier to reason about, predictable, can be cached.
+❌ Cons: Cannot change external state; not useful when you need to save files, modify objects, interact with databases.
+
+**Impure function**
+
+- Definition: May return different results for the same inputs, or has side effects (modify global variables, write to files, mutate objects).
+✅ Pros: Can update state, do I/O, change objects — essential for most real programs.
+❌ Cons: Harder to debug and test; behaviour depends on hidden external state.
 
 Because we are just getting started with object-oriented programming, the code in this
 chapter is not idiomatic – it is not the kind of code experienced programmers write. If you
