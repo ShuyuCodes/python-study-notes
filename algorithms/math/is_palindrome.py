@@ -15,8 +15,13 @@ class Solution(object):
         while x > 0:
             digit = x % 10
             rev = rev * 10 + digit
-            x = x // 10  # x gets smaller every iteration, so it will hit 0
+            x = x // 10  # Remove the last digit from x. x gets smaller every iteration, so it will hit 0
 
         return rev == original
 
 # Follow up: Could you solve it without converting the integer to a string?
+
+a = 101
+b = 123
+print(Solution().isPalindrome(a))  # True
+print(Solution().isPalindrome(b))  # False

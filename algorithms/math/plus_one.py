@@ -48,8 +48,8 @@ class Solution(object):
         op = []
         rev = 0
 
-        for i, n in enumerate(digits[::-1]):  # # start at second last, go back to first
-            if len(digits) == 1 and n + 1 == 10:  # handle the only digit cases
+        for i, n in enumerate(digits[::-1]):  # Start at second last, go back to first.
+            if len(digits) == 1 and n + 1 == 10:  # Handle the only digit cases.
                 op.append(0)
                 rev = 1
                 op.append(rev)
@@ -57,7 +57,7 @@ class Solution(object):
                 op.append(n + 1)
                 rev = 0
 
-            elif i == 0 and n + 1 == 10:  # handle a list's last digit that has more than one element
+            elif i == 0 and n + 1 == 10:  # Handle a list's last digit that has more than one element.
                 op.append(0)
                 rev = 1
 
@@ -65,14 +65,14 @@ class Solution(object):
                 op.append(n + 1)
                 rev = 0
 
-            elif i != len(digits) - 1 and n + rev == 10:  # check the rest elements
+            elif i != len(digits) - 1 and n + rev == 10:  # Check the rest elements.
                 op.append(0)
                 rev = 1
             elif i == len(digits) - 1 and n + rev != 10:
                 op.append(n + rev)
                 rev = 0
 
-            elif i == len(digits) - 1 and n + rev == 10:  # check the last elements with one more element list
+            elif i == len(digits) - 1 and n + rev == 10:  # Check the last elements with one more element list.
                 op.append(0)
                 rev = 1
                 op.append(rev)
@@ -85,18 +85,27 @@ class Solution(object):
 
 
 digits = [1, 2, 3]
+
 print(digits[::-1])
 print(digits, '\n')
+
+print(Solution().plusOne(digits))
+
+"""Runtime 
+0 ms Beats 100.00%
+Memory 
+12.15 MB Beats 91.23%
+"""
 
 
 op = []
 last_digit = digits[-1]
 rev = 0
 
-for i, n in enumerate(digits[::-1]):  # # start at second last, go back to first
+for i, n in enumerate(digits[::-1]):  # Start at second last, go back to first.
     print(n)
 
-    if len(digits) == 1 and n + 1 == 10:  # handle only digit cases
+    if len(digits) == 1 and n + 1 == 10:  # Handle only digit cases.
         op.append(0)
         rev = 1
         op.append(rev)
@@ -104,7 +113,7 @@ for i, n in enumerate(digits[::-1]):  # # start at second last, go back to first
         op.append(n + 1)
         rev = 0
 
-    elif i == 0 and n + 1 == 10:  # handle a list's last digit that has more than one element
+    elif i == 0 and n + 1 == 10:  # Handle a list's last digit that has more than one element.
         op.append(0)
         rev = 1
         print(i, op)
@@ -113,7 +122,7 @@ for i, n in enumerate(digits[::-1]):  # # start at second last, go back to first
         rev = 0
         print(i, op)
 
-    elif i != len(digits) - 1 and n + rev == 10:  # check the rest elements
+    elif i != len(digits) - 1 and n + rev == 10:  # Check the rest elements.
         op.append(0)
         print(i, op)
         rev = 1
@@ -122,7 +131,7 @@ for i, n in enumerate(digits[::-1]):  # # start at second last, go back to first
         print(i, op)
         rev = 0
 
-    elif i == len(digits) - 1 and n + rev == 10:  # check the last elements with one more element list
+    elif i == len(digits) - 1 and n + rev == 10:  # Check the last elements with one more element list.
         op.append(0)
         rev = 1
         op.append(rev)
@@ -135,19 +144,3 @@ for i, n in enumerate(digits[::-1]):  # # start at second last, go back to first
 
 print(op[::-1])
 print(digits, '\n')
-
-
-
-
-"""Runtime
-0
-ms
-Beats
-100.00%
-Memory
-12.15
-MB
-Beats
-91.23%
-"""
-

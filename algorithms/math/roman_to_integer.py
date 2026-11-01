@@ -76,3 +76,7 @@ class Solution(object):
                 total += roman[s[i]]
 
         return total
+
+
+s = "LVIII"
+print(Solution().romanToInt(s))  # 58
