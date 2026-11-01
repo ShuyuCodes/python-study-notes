@@ -4,10 +4,8 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-
-
 def longestCommonPrefix(strs):
-    # Find the smallest length of element in the list
+    # Find the shortest word in the list
     word = ''
     for i, w in enumerate(strs):
         if i < len(strs) - 1:
@@ -15,9 +13,9 @@ def longestCommonPrefix(strs):
                 word = w
     strs.remove(word)
 
+    # Check each element in the list with the shortest word
     l = []
     flag = False
-
     for i in range(len(word)):
         for s in strs:
             if word[i] != s[i]:
@@ -27,7 +25,7 @@ def longestCommonPrefix(strs):
         if flag:
             l.append(word[i])
 
-    return ''.join(l)
+    return ''.join(l)  # Return longest prefix
 
 
 strs = ["flower", "flow", "flight"]
