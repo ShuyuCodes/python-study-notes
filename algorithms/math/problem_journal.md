@@ -4,12 +4,15 @@ This journal keeps track of the programming problems I have worked on, in chrono
 
 ## LeetCode — Easy
 
-- is_palindrome [while loop, modulo operator %, floor division operator //] - Oct 29, 2026
-- roman_to_integer [for loop, dictionary] - Oct 30, 2026
-- plus_one [for loop, if statement] - Oct 31, 2026
-- longest_common_prefix [for loop, if statement, break statement] — Nov 1, 2026
-- add_binary [while loop, string methods, reversed()] — Nov 1, 2026
-- sqrt_x 
+## LeetCode — Easy
+
+1. is_palindrome [while loop, modulo operator %, floor division operator //] — Oct 29, 2026
+2. roman_to_integer [for loop, dictionary] — Oct 30, 2026
+3. plus_one [for loop, if statement] — Oct 31, 2026
+4. longest_common_prefix [for loop, if statement, break statement] — Nov 1, 2026
+5. add_binary [while loop, string methods, reversed()] — Nov 1, 2026
+6. sqrt_x [while loop] — Nov 2, 2026
+
 
 ## Notes
 
