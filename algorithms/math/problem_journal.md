@@ -12,6 +12,7 @@ This journal keeps track of the programming problems I have worked on, in chrono
 4. longest_common_prefix [for loop, if statement, break statement] — Nov 1, 2026
 5. add_binary [while loop, string methods, reversed()] — Nov 1, 2026
 6. sqrt_x [while loop] — Nov 2, 2026
+7. climbing_stairs [fibonacci, dynamic programming] — Nov 3, 2026
 
 
 ## Notes
