@@ -4,15 +4,14 @@ This journal keeps track of the programming problems I have worked on, in chrono
 
 ## LeetCode — Easy
 
-## LeetCode — Easy
-
-1. is_palindrome [while loop, modulo operator %, floor division operator //] — Oct 29, 2026
+1. is_palindrome [while loop, modulo, floor division] — Oct 29, 2026
 2. roman_to_integer [for loop, dictionary] — Oct 30, 2026
 3. plus_one [for loop, if statement] — Oct 31, 2026
 4. longest_common_prefix [for loop, if statement, break statement] — Nov 1, 2026
 5. add_binary [while loop, string methods, reversed()] — Nov 1, 2026
 6. sqrt_x [while loop] — Nov 2, 2026
 7. climbing_stairs [fibonacci, dynamic programming] — Nov 3, 2026
+8. excel_sheet_column_title [while loop, modulo, floor division] — Nov 4, 2026
 
 
 ## Notes
