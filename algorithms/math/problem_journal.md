@@ -12,6 +12,7 @@ This journal keeps track of the programming problems I have worked on, in chrono
 6. sqrt_x [while loop] — Nov 2, 2026
 7. climbing_stairs [fibonacci, dynamic programming] — Nov 3, 2026
 8. excel_sheet_column_title [while loop, modulo, floor division] — Nov 4, 2026
+9. excel_sheet_column_number [in place method of list - .reverse()] — Nov , 2026
 
 
 ## Notes
