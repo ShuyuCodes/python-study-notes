@@ -123,3 +123,54 @@ class Solution(object):
 
         return False  # Return False if a cycle is detected.
 
+
+# Floyd's Cycle Detection Algorithm (Tortoise and Hare):
+#
+# 1. Initialize two pointers, slow and fast, with the same value n.
+#
+# 2. Move slow one step at a time:
+#    slow = f(slow)
+#
+# 3. Move fast two steps at a time:
+#    fast = f(f(fast))
+#
+# 4. If slow and fast meet at 1, n is a happy number.
+#
+# 5. If slow and fast meet at a number other than 1,
+#    a cycle has been detected, so n is not a happy number.
+#
+# 6. Unlike the set approach, Floyd's algorithm does not need
+#    to store previously visited numbers.
+#
+# Time Complexity: O(k)
+# Space Complexity: O(1)
+
+# Solution three:
+class Solution(object):
+
+    def sum_of_squared_digits(self, n):
+        """
+        Calculate the sum of the squares of the digits using modulo and floor division.
+        """
+        total = 0
+
+        while n > 0:
+            digit = n % 10
+            total += digit ** 2
+            n //= 10
+
+        return total
+
+    def isHappy(self, n):
+        """
+        :type n: int
+        :rtype: bool
+        """
+        slow = self.sum_of_squared_digits(n)
+        fast = self.sum_of_squared_digits(self.sum_of_squared_digits(n)) # One step faster than slow
+
+        while slow != fast:
+            slow = self.sum_of_squared_digits(slow)
+            fast = self.sum_of_squared_digits(self.sum_of_squared_digits(fast))  # One step faster than slow
+
+        return slow == 1  # Return False if a cycle is detected.
