@@ -16,6 +16,9 @@ This journal keeps track of the programming problems I have worked on, in chrono
 10. happy_number [list comprehension, string conversion, modulo and floor division, Set and cycle detection，Floyd's Cycle Detection (Tortoise and Hare)] — Nov 5, 2026
 11. power_of_two [while loop, bitwise AND &] — Nov 6, 2026
 
+12. add_digits [digital root, modulo 9] — Nov 10, 2026
+13. ugly_number []
+
 
 ## Notes
 

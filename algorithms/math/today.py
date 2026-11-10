@@ -1,31 +1,36 @@
-"""
-258. Add Digits
+"""263. Ugly Number
 Easy
 Topics
 premium lock icon
 Companies
-Hint
-Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.
+An ugly number is a positive integer which does not have a prime factor other than 2, 3, and 5.
+
+Given an integer n, return true if n is an ugly number.
 
 
 
 Example 1:
 
-Input: num = 38
-Output: 2
-Explanation: The process is
-38 --> 3 + 8 --> 11
-11 --> 1 + 1 --> 2
-Since 2 has only one digit, return it.
+Input: n = 6
+Output: true
+Explanation: 6 = 2 × 3
 Example 2:
 
-Input: num = 0
-Output: 0
+Input: n = 1
+Output: true
+Explanation: 1 has no prime factors.
+Example 3:
+
+Input: n = 14
+Output: false
+Explanation: 14 is not ugly since it includes the prime factor 7.
 
 
 Constraints:
 
-0 <= num <= 231 - 1
+-231 <= n <= 231 - 1
 """
+
+
 class Solution:
-    def addDigits(self, num: int) -> int:
+    def isUgly(self, n: int) -> bool:

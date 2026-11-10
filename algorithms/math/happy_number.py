@@ -47,7 +47,22 @@ Constraints:
 #    It only needs to contain a previously visited number.
 #
 # Therefore, we use a set to record visited numbers.
+"""
+**LeetCode 202 — Happy Number**
 
+【Three approaches:**
+1. **String + List + Set:** Convert the number into a list of digits, calculate the sum of squared digits, and use a set to detect repeated numbers.
+2. **Modulo + Floor Division + Set:** Extract digits mathematically using `%` and `//`, avoiding string and list conversion. Use a set to detect cycles.
+3. **Floyd's Cycle Detection (Tortoise and Hare):** Use two pointers moving at different speeds to detect a cycle without storing previously visited numbers. `slow` moves one step, while `fast` moves two steps.
+
+**Key insight:** A deterministic sequence that repeats a number has entered a cycle. If the two pointers meet at `1`, the number is happy; otherwise, it is not.
+
+**Complexity:**
+- Solutions 1 & 2: O(k) time, O(k) auxiliary space.
+- Solution 3: O(k) time, O(1) auxiliary space.
+
+*Here, k represents the number of steps in the sequence.*
+"""
 
 """
 1. Convert the number into a list of digits.  done
