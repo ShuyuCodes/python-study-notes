@@ -17,7 +17,7 @@ This journal keeps track of the programming problems I have worked on, in chrono
 11. power_of_two [while loop, bitwise AND &] — Nov 6, 2026
 
 12. add_digits [digital root, modulo 9] — Nov 10, 2026
-13. ugly_number []
+13. ugly_number [while loop, if statements, modulo %, floor division //] — Nov 11, 2026
 
 
 ## Notes
