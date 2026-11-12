@@ -19,6 +19,7 @@ This journal keeps track of the programming problems I have worked on, in chrono
 12. add_digits [digital root, modulo 9] — Nov 10, 2026
 13. ugly_number [while loop, if statements, modulo %, floor division //] — Nov 11, 2026
 14. missing_number [sum of arithmetic series] — Nov 11, 2026
+15. nim_game [modulo %] — Nov 12, 2026
 
 
 ## Notes
