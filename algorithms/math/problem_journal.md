@@ -20,6 +20,11 @@ This journal keeps track of the programming problems I have worked on, in chrono
 13. ugly_number [while loop, if statements, modulo %, floor division //] — Nov 11, 2026
 14. missing_number [sum of arithmetic series] — Nov 11, 2026
 15. nim_game [modulo %] — Nov 12, 2026
+16. power_of_three [modulo %]  — Nov 13, 2026
+17. power_of_four [modulo %, bitwise AND &] — Nov 13, 2026
+18. valid_perfect_square [binary search] — Nov 13, 2026
+19. convert_a_number_to_hexadecimal [bitwise AND &, while loop] — Nov 14, 2026
+20. 
 
 
 ## Notes
